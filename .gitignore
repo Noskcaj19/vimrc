@@ -1,0 +1,4 @@
+temp_dirs/*
+plugins/
+tags
+.DS_Store
