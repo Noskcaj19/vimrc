@@ -46,7 +46,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/echodoc.vim'
 Plug 'kshenoy/vim-signature'
-
+Plug 'taohex/lightline-buffer'
+Plug 'mbbill/undotree'
+Plug 'jremmen/vim-ripgrep'
+    
 " Themes
 Plug 'tomasr/molokai'
 

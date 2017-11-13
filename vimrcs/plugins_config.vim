@@ -87,9 +87,33 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set showtabline=2  " always show tabline
+
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+
+
+" let g:lightline = {
+"     \ 'tabline': {
+"         \ 'left': [ [ 'bufferinfo' ], [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
+"         \ 'right': [ [ 'close' ], ],
+"         \ },
+"     \ 'component_expand': {
+"         \ 'buffercurrent': 'lightline#buffer#buffercurrent2',
+"         \ },
+"     \ 'component_type': {
+"         \ 'buffercurrent': 'tabsel',
+"         \ },
+"     \ 'component_function': {
+"         \ 'bufferbefore': 'lightline#buffer#bufferbefore',
+"         \ 'bufferafter': 'lightline#buffer#bufferafter',
+"         \ 'bufferinfo': 'lightline#buffer#bufferinfo',
+"         \ },
+"     \ }
+
+
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
