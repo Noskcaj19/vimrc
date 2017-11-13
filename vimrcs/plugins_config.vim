@@ -152,6 +152,14 @@ let g:go_fmt_command = "goimports"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-autoformat
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:formatdef_rustfmt='"rustup run nightly rustfmt"'
+
+" Set autoformat on save
+au BufWrite * :Autoformat
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""m
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python

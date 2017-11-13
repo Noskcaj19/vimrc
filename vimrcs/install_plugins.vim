@@ -49,7 +49,8 @@ Plug 'kshenoy/vim-signature'
 Plug 'taohex/lightline-buffer'
 Plug 'mbbill/undotree'
 Plug 'jremmen/vim-ripgrep'
-    
+Plug 'Chiel92/vim-autoformat'
+
 " Themes
 Plug 'tomasr/molokai'
 
