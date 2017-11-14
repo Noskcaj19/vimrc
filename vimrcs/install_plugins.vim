@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""
 " let s:vim_runtime = expand('<sfile>:p:h')."/.."
 
-call plug#begin('~/.vim_runtime/plugins/')
+call plug#begin('~/.vim/plugins/')
 
 Plug 'corntrace/bufexplorer'
 Plug 'ctrlpvim/ctrlp.vim'
