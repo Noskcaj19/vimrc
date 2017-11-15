@@ -152,14 +152,25 @@ let g:go_fmt_command = "goimports"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-autoformat
+" => neoformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:formatdef_rustfmt='"rustup run nightly rustfmt"'
 
-" Set autoformat on save
-au BufWrite * :Autoformat
+" Correct rustfmt config
+let g:neoformat_rust_rustup_nightly = {
+    \ 'exe': 'rustup',
+    \ 'args': ['run', 'nightly', 'rustfmt', '--write-mode=plain'],
+    \ }
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""m
+let g:neoformat_enabled_rust = ['rustup_nightly']
+
+
+" Auto-fmt on save
+augroup fmt
+    autocmd!
+    autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python
