@@ -89,6 +89,7 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set showtabline=2  " always show tabline
+set noshowmode
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -159,6 +160,7 @@ let g:go_fmt_command = "goimports"
 let g:neoformat_rust_rustup_nightly = {
     \ 'exe': 'rustup',
     \ 'args': ['run', 'nightly', 'rustfmt', '--write-mode=plain'],
+    \ 'stdin': 1,
     \ }
 
 let g:neoformat_enabled_rust = ['rustup_nightly']
@@ -195,7 +197,6 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Language Server Client
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set hidden
 
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
